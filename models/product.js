@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import ErrorHandler from "../middelewares/error.js";
 
-const bloggerSchema=new mongoose.Schema({
+const productSchema=new mongoose.Schema({
     titel:
     {
         type: String,
@@ -28,6 +28,5 @@ const bloggerSchema=new mongoose.Schema({
         ref:'User',
         require:true
     }
-   
 },{timestamps:true})
-export const blogeModel=mongoose.model('blogge',bloggerSchema);
+export const productModel=mongoose.model('product',productSchema);

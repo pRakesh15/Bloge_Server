@@ -12,6 +12,7 @@ export const createBlogg = async(req, res, next) => {
       titel,
       description,
       image,
+      price,
       user: req.myUser._id,
     });
 

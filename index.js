@@ -5,6 +5,7 @@ import { config } from 'dotenv';
 import cors from 'cors';
 import { router } from './routs/user.js';
 import * as modelRouter from './routs/blogge.js';
+import * as productRouter from './routs/product.js';
 import { errorMiddleware } from './middelewares/error.js';
 
 
@@ -30,6 +31,7 @@ app.use(errorMiddleware);
 
 app.use("/api/vi/user",router)
 app.use("/api/vi/blogges",modelRouter.router)
+app.use("/api/vi/product",productRouter.router)
 app.get("/",(req,res)=>
 {
     res.send("jay shree ram")
